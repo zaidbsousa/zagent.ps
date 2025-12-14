@@ -213,6 +213,80 @@
     .social img.icon-img { width: 22px; height: 22px; display: block; filter: invert(0); opacity: 0.7; }
     .social a:hover img.icon-img, .social a:focus img.icon-img { opacity: 1; filter: invert(40%) sepia(100%) saturate(2000%) hue-rotate(195deg) brightness(1) contrast(1); }
     
+    /* Email Form Styles */
+    .email-form {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .form-group {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+      line-height: 1.8;
+    }
+    .form-group pre {
+      white-space: pre;
+    }
+    .email-input {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(0, 136, 246, 0.3);
+      color: #1a1a1a;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: 14px;
+      padding: 4px 8px;
+      min-width: 200px;
+      max-width: 280px;
+      outline: none;
+      transition: border-color 200ms ease;
+      vertical-align: middle;
+    }
+    .email-input:focus {
+      border-bottom-color: var(--accent);
+    }
+    .email-input::placeholder {
+      color: rgba(106, 153, 85, 0.5);
+    }
+    .submit-btn {
+      background: transparent;
+      border: 1px solid rgba(0, 136, 246, 0.3);
+      color: #1a1a1a;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: 13px;
+      padding: 8px 16px;
+      cursor: pointer;
+      transition: all 200ms ease;
+      margin-top: 8px;
+      border-radius: 4px;
+    }
+    .submit-btn:hover, .submit-btn:focus {
+      border-color: var(--accent);
+      background: rgba(0, 136, 246, 0.05);
+      outline: none;
+    }
+    .submit-btn:active {
+      transform: scale(0.98);
+    }
+    .submit-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    .form-message {
+      margin-top: 12px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: 13px;
+      min-height: 20px;
+    }
+    .form-message.success {
+      color: #6A9955;
+    }
+    .form-message.error {
+      color: #f48771;
+    }
+    
     /* Responsive Design */
     @media (max-width: 768px) {
       .code-editor {
@@ -308,6 +382,17 @@
         font-size: 12px;
         gap: 6px;
       }
+      .email-input {
+        min-width: 160px;
+        font-size: 12px;
+      }
+      .submit-btn {
+        font-size: 12px;
+        padding: 6px 12px;
+      }
+      .form-message {
+        font-size: 12px;
+      }
       .social {
         gap: 10px;
       }
@@ -370,7 +455,28 @@
             <span class="caret" aria-hidden="true"></span>
           </div>
 
-          <pre class="code-line fade-in delay-2" style="margin-top: 16px;"><span class="comment">// Social Links</span></pre>
+          <pre class="code-line fade-in delay-2" style="margin-top: 24px;"><span class="comment">// Email Collection</span></pre>
+          <form id="emailForm" class="email-form fade-in delay-2" style="margin-top: 12px; direction: ltr;">
+            <div class="form-group">
+              <pre class="code-line" style="margin: 0; display: inline-block;"><span class="keyword">const</span> <span class="identifier">email</span> <span class="operator">=</span> <span class="string">"</span></pre>
+              <input 
+                type="email" 
+                id="emailInput" 
+                name="email" 
+                placeholder="your@email.com" 
+                required 
+                aria-label="البريد الإلكتروني"
+                class="email-input"
+              />
+              <pre class="code-line" style="margin: 0; display: inline-block;"><span class="string">"</span><span class="operator">;</span></pre>
+            </div>
+            <button type="submit" class="submit-btn" aria-label="إرسال">
+              <pre class="code-line" style="margin: 0;"><span class="comment">// Submit</span></pre>
+            </button>
+            <div id="formMessage" class="form-message" aria-live="polite"></div>
+          </form>
+
+          <pre class="code-line fade-in delay-2" style="margin-top: 24px;"><span class="comment">// Social Links</span></pre>
           <nav class="social fade-in delay-2" aria-label="وسائل التواصل" style="direction: ltr; justify-content: center; margin-top: 12px;">
             <!-- Instagram (minimal outline) -->
           <a href="https://www.instagram.com/zagent.ps" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
@@ -544,6 +650,78 @@
     resize();
     window.addEventListener('resize', resize);
     requestAnimationFrame(loop);
+  })();
+</script>
+<script>
+  // Email form submission handler
+  var FORMPREE_FORM_ID = 'xgvgqnjz';
+  
+  (function() {
+    var form = document.getElementById('emailForm');
+    var emailInput = document.getElementById('emailInput');
+    var submitBtn = form.querySelector('.submit-btn');
+    var messageDiv = document.getElementById('formMessage');
+    
+    if (!form) return;
+    
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      var email = emailInput.value.trim();
+      if (!email) {
+        showMessage('يرجى إدخال بريد إلكتروني صحيح', 'error');
+        return;
+      }
+      
+      // Validate email format
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        showMessage('صيغة البريد الإلكتروني غير صحيحة', 'error');
+        return;
+      }
+      
+      // Disable form during submission
+      submitBtn.disabled = true;
+      emailInput.disabled = true;
+      showMessage('جاري الإرسال...', '');
+      
+      // Submit to Formspree
+      submitEmail(email);
+    });
+    
+    function submitEmail(email) {
+      fetch('https://formspree.io/f/' + FORMPREE_FORM_ID, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: email,
+          _subject: 'New zAgent Subscription',
+          _replyto: email
+        })
+      })
+      .then(function(response) {
+        if (response.ok) {
+          showMessage('شكراً! تم إرسال بريدك الإلكتروني بنجاح', 'success');
+          emailInput.value = '';
+        } else {
+          throw new Error('Submission failed');
+        }
+      })
+      .catch(function(error) {
+        showMessage('حدث خطأ. يرجى المحاولة مرة أخرى', 'error');
+      })
+      .finally(function() {
+        submitBtn.disabled = false;
+        emailInput.disabled = false;
+      });
+    }
+    
+    function showMessage(text, type) {
+      messageDiv.textContent = text;
+      messageDiv.className = 'form-message ' + (type || '');
+    }
   })();
 </script>
 </html>
