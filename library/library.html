@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>مكتبة أدوات الذكاء الاصطناعي | AI Tools Library - zAgent</title>
+  <meta name="description" content="مكتبة شاملة لأفضل أدوات ومنصات الذكاء الاصطناعي - LLMs، تحويل النص إلى صوت، تحويل النص إلى صورة، وتحويل النص إلى فيديو.">
+  <meta name="keywords" content="AI tools, LLM, text to audio, text to image, text to video, AI library, zAgent, أدوات الذكاء الاصطناعي">
+  <meta name="author" content="zAgent">
+  <meta name="language" content="Arabic">
+  <meta name="geo.region" content="PS">
+  <meta name="geo.placename" content="Palestine">
+  
+  <!-- Open Graph / Facebook, Instagram, WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://library.zagent.ps/">
+  <meta property="og:title" content="مكتبة أدوات الذكاء الاصطناعي | AI Tools Library - zAgent">
+  <meta property="og:description" content="مكتبة شاملة لأفضل أدوات ومنصات الذكاء الاصطناعي">
+  <meta property="og:image" content="https://zagent.ps/zAgent-logo.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ar_PS">
+  <meta property="og:site_name" content="zAgent Library">
+  
+  <!-- X (Twitter) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://library.zagent.ps/">
+  <meta name="twitter:title" content="مكتبة أدوات الذكاء الاصطناعي | AI Tools Library - zAgent">
+  <meta name="twitter:description" content="مكتبة شاملة لأفضل أدوات ومنصات الذكاء الاصطناعي">
+  <meta name="twitter:image" content="https://zagent.ps/zAgent-logo.png">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://library.zagent.ps/">
+  
+  <link rel="stylesheet" href="library.css">
+  <link rel="icon" type="image/png" href="https://zagent.ps/zAgent-favicon.png">
+  <link rel="apple-touch-icon" href="https://zagent.ps/zAgent-favicon.png">
+  <meta name="theme-color" content="#f0f1f5">
+  <meta name="color-scheme" content="dark light">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <canvas class="code-bg" id="codeRain" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <header>
+      <div class="header-content">
+      </div>
+    </header>
+    <main>
+      <section class="center">
+
+        <div class="code-editor fade-in">
+          <h1 class="fade-in delay-1" style="margin-top: 16px; direction: rtl;">
+            مكتبة <span class="accent">أدوات الذكاء الاصطناعي</span>
+          </h1>
+          <pre class="code-line fade-in delay-2" style="margin-top: 16px; text-align: center; direction: rtl;">
+<span class="comment">// AI Tools Library | مكتبة شاملة لأفضل منصات وأدوات الذكاء الاصطناعي</span>
+          </pre>
+        </div>
+
+        <div class="fade-in delay-2" style="text-align: center; margin: 20px 0;">
+          <a href="https://zagent.ps" class="back-link" aria-label="العودة للصفحة الرئيسية">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            <span>العودة للصفحة الرئيسية</span>
+          </a>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-container fade-in delay-2">
+          <div class="code-editor search-box">
+            <input type="text" id="searchInput" class="search-input" placeholder="ابحث عن أداة..." aria-label="البحث عن أداة">
+            <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"/>
+              <path d="m21 21-4.35-4.35"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Category Filter -->
+        <div class="category-filter fade-in delay-2">
+          <button class="filter-btn active" data-category="all">الكل</button>
+          <button class="filter-btn" data-category="llm">LLMs</button>
+          <button class="filter-btn" data-category="audio">Text to Audio</button>
+          <button class="filter-btn" data-category="image">Text to Image</button>
+          <button class="filter-btn" data-category="video">Text to Video</button>
+          <button class="filter-btn" data-category="agents">Agents</button>
+          <button class="filter-btn" data-category="aggregators">Aggregators</button>
+          <button class="filter-btn" data-category="humanize">Humanize AI</button>
+        </div>
+
+        <!-- LLMs Section -->
+        <div class="category-section fade-in delay-3" data-category="llm">
+          <div class="category-header">
+            <h2 class="category-title">
+              <svg class="category-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                <line x1="9" y1="10" x2="15" y2="10"/>
+                <line x1="9" y1="14" x2="13" y2="14"/>
+              </svg>
+              <span>Large Language Models (LLMs)</span>
+              <span class="category-help" data-tooltip="نماذج اللغة الكبيرة هي أنظمة ذكاء اصطناعي متقدمة قادرة على فهم وإنتاج النص البشري. تستخدم في المحادثة، الكتابة، البرمجة، التحليل، والترجمة.">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                  <line x1="12" y1="17" x2="12.01" y2="17"/>
+                </svg>
+              </span>
+            </h2>
+            <pre class="code-line category-subtitle">
+<span class="comment">// نماذج اللغة الكبيرة - محادثة، كتابة، برمجة، وتحليل</span>
+            </pre>
+          </div>
+          <div class="tools-grid">
+            <!-- ChatGPT -->
+            <div class="tool-card fade-in delay-3" data-tool="chatgpt" data-category="llm">
+              <div class="tool-image-wrapper">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="ChatGPT" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=ChatGPT'">
+              </div>
+              <h3 class="tool-title">ChatGPT</h3>
+              <p class="tool-description">
+                نموذج محادثة متقدم من OpenAI. يدعم المحادثة، الكتابة، البرمجة، والتحليل. متوفر في إصدارات GPT-4 و GPT-3.5.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">OpenAI</span>
+                <span class="tag">GPT-4</span>
+                <span class="tag">محادثة</span>
+              </div>
+              <a href="https://chat.openai.com" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Claude -->
+            <div class="tool-card fade-in delay-3" data-tool="claude" data-category="llm">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=claude.ai&sz=128" alt="Claude" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Claude'">
+              </div>
+              <h3 class="tool-title">Claude</h3>
+              <p class="tool-description">
+                مساعد ذكي من Anthropic. يتميز بفهم سياقي عميق، أمان عالي، وقدرة على معالجة نصوص طويلة تصل إلى 200K token.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">Anthropic</span>
+                <span class="tag">Claude 3</span>
+                <span class="tag">آمن</span>
+              </div>
+              <a href="https://claude.ai" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Google Gemini -->
+            <div class="tool-card fade-in delay-3" data-tool="gemini" data-category="llm">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=gemini.google.com&sz=128" alt="Google Gemini" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Gemini'">
+              </div>
+              <h3 class="tool-title">Google Gemini</h3>
+              <p class="tool-description">
+                نموذج متعدد الوسائط من Google. يجمع بين النص، الصور، والفيديو. متكامل مع خدمات Google.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">Google</span>
+                <span class="tag">متعدد الوسائط</span>
+                <span class="tag">Gemini Pro</span>
+              </div>
+              <a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Perplexity -->
+            <div class="tool-card fade-in delay-3" data-tool="perplexity" data-category="llm">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=perplexity.ai&sz=128" alt="Perplexity" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Perplexity'">
+              </div>
+              <h3 class="tool-title">Perplexity AI</h3>
+              <p class="tool-description">
+                محرك بحث ذكي مدعوم بالذكاء الاصطناعي. يجمع المعلومات من مصادر موثوقة ويقدم إجابات مع مصادر.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">بحث ذكي</span>
+                <span class="tag">مصادر</span>
+                <span class="tag">دقيق</span>
+              </div>
+              <a href="https://www.perplexity.ai" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Grok -->
+            <div class="tool-card fade-in delay-3" data-tool="grok" data-category="llm">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=x.ai&sz=128" alt="Grok" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Grok'">
+              </div>
+              <h3 class="tool-title">Grok</h3>
+              <p class="tool-description">
+                مساعد ذكي من xAI. متكامل مع X (Twitter) ويوفر معلومات في الوقت الفعلي مع شخصية فريدة.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">xAI</span>
+                <span class="tag">X Integration</span>
+                <span class="tag">Real-time</span>
+              </div>
+              <a href="https://x.ai" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Mistral AI -->
+            <div class="tool-card fade-in delay-3" data-tool="mistral" data-category="llm">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=mistral.ai&sz=128" alt="Mistral AI" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Mistral'">
+              </div>
+              <h3 class="tool-title">Mistral AI</h3>
+              <p class="tool-description">
+                منصة ذكاء اصطناعي أوروبية متقدمة. توفر نماذج مثل Mistral Large و Le Chat مع أداء عالي في التفكير والبرمجة. متاحة عبر واجهة محادثة سهلة الاستخدام.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">European AI</span>
+                <span class="tag">Mistral Large</span>
+                <span class="tag">Le Chat</span>
+              </div>
+              <a href="https://mistral.ai" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Llama 3 -->
+            <div class="tool-card fade-in delay-3" data-tool="llama" data-category="llm">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=ai.meta.com&sz=128" alt="Llama 3" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Llama+3'">
+              </div>
+              <h3 class="tool-title">Llama 3</h3>
+              <p class="tool-description">
+                نموذج مفتوح المصدر من Meta. يوفر أداءً ممتازاً بتكلفة منخفضة، مثالي للأفراد والباحثين. متوفر في أحجام مختلفة من 8B إلى 70B parameters.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">Meta</span>
+                <span class="tag">Open Source</span>
+                <span class="tag">Cost-Efficient</span>
+              </div>
+              <a href="https://ai.meta.com/llama" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- DeepSeek -->
+            <div class="tool-card fade-in delay-3" data-tool="deepseek" data-category="llm">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=deepseek.com&sz=128" alt="DeepSeek" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=DeepSeek'">
+              </div>
+              <h3 class="tool-title">DeepSeek</h3>
+              <p class="tool-description">
+                نموذج ذكاء اصطناعي صيني مفتوح المصدر. يوفر أداءً ممتازاً بتكلفة منخفضة للغاية. يدعم الكتابة، البرمجة، البحث، والأسئلة اليومية مع واجهة مجانية.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">Chinese AI</span>
+                <span class="tag">Open Source</span>
+                <span class="tag">Cost-Efficient</span>
+              </div>
+              <a href="https://deepseek.com" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI Agents Section (Highlighted) -->
+        <div class="category-section category-section-featured fade-in delay-3" data-category="agents">
+          <div class="category-header">
+            <h2 class="category-title">
+              <svg class="category-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                <path d="M2 17l10 5 10-5"/>
+                <path d="M2 12l10 5 10-5"/>
+              </svg>
+              <span>AI Agents</span>
+              <span class="category-help" data-tooltip="وكلاء الذكاء الاصطناعي هم أنظمة مستقلة قادرة على تنفيذ مهام معقدة تلقائياً. تجمع بين نماذج اللغة والبرمجة لإنشاء حلول أتمتة ذكية.">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                  <line x1="12" y1="17" x2="12.01" y2="17"/>
+                </svg>
+              </span>
+            </h2>
+            <pre class="code-line category-subtitle">
+<span class="comment">// وكلاء ذكاء اصطناعي مستقلة - أتمتة، برمجة، ومهام معقدة</span>
+            </pre>
+          </div>
+          <div class="tools-grid">
+            <!-- Manus -->
+            <div class="tool-card fade-in delay-3" data-tool="manus" data-category="agents">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=manus.ai&sz=128" alt="Manus" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Manus'">
+              </div>
+              <h3 class="tool-title">Manus</h3>
+              <p class="tool-description">
+                منصة وكلاء ذكاء اصطناعي متقدمة. تمكن من إنشاء وكلاء مستقلين قادرين على تنفيذ مهام معقدة تلقائياً، من البحث والتحليل إلى الأتمتة الكاملة.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">AI Agents</span>
+                <span class="tag">Automation</span>
+                <span class="tag">Autonomous</span>
+              </div>
+              <a href="https://manus.ai" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- AgentGPT -->
+            <div class="tool-card fade-in delay-3" data-tool="agentgpt" data-category="agents">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=agentgpt.reworkd.ai&sz=128" alt="AgentGPT" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=AgentGPT'">
+              </div>
+              <h3 class="tool-title">AgentGPT</h3>
+              <p class="tool-description">
+                منصة ويب لبناء وتشغيل وكلاء الذكاء الاصطناعي المستقلين. واجهة سهلة لإنشاء وكلاء قادرين على تنفيذ أهداف معقدة تلقائياً.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">Web Platform</span>
+                <span class="tag">Goal-Oriented</span>
+                <span class="tag">Easy to Use</span>
+              </div>
+              <a href="https://agentgpt.reworkd.ai" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Agent.sa -->
+            <div class="tool-card fade-in delay-3" data-tool="agentsa" data-category="agents">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=agent.sa&sz=128" alt="Agent.sa" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Agent.sa'">
+              </div>
+              <h3 class="tool-title">Agent.sa</h3>
+              <p class="tool-description">
+                موظف ذكاء اصطناعي متكامل يتحدث العربية من Velents.ai. قادر على التعامل مع المكالمات الهاتفية، إدارة محادثات واتساب، تتبع طلبات العملاء، تنفيذ المهام، وتحليل البيانات - كل ذلك بالعربية الطبيعية.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">Arabic AI</span>
+                <span class="tag">WhatsApp</span>
+                <span class="tag">Enterprise</span>
+              </div>
+              <a href="https://agent.sa" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Coding Agents Subsection -->
+          <div class="subcategory-header">
+            <h3 class="subcategory-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+              </svg>
+              <span>Coding Agents</span>
+            </h3>
+            <pre class="code-line subcategory-subtitle">
+<span class="comment">// وكلاء ذكاء اصطناعي متخصصة في البرمجة والكود</span>
+            </pre>
+          </div>
+          <div class="tools-grid">
+            <!-- GitHub Copilot -->
+            <div class="tool-card fade-in delay-3" data-tool="copilot" data-category="agents">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=github.com&sz=128" alt="GitHub Copilot" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Copilot'">
+              </div>
+              <h3 class="tool-title">GitHub Copilot</h3>
+              <p class="tool-description">
+                مساعد برمجة ذكي من GitHub. يوفر اقتراحات كود في الوقت الفعلي أثناء الكتابة. يعمل كامتداد في VS Code ومحررات أخرى، مدعوم بـ GPT-4.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">GitHub</span>
+                <span class="tag">Code Completion</span>
+                <span class="tag">VS Code</span>
+              </div>
+              <a href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Cursor -->
+            <div class="tool-card fade-in delay-3" data-tool="cursor" data-category="agents">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=cursor.sh&sz=128" alt="Cursor" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Cursor'">
+              </div>
+              <h3 class="tool-title">Cursor</h3>
+              <p class="tool-description">
+                محرر كود مدعوم بالذكاء الاصطناعي. يجمع بين محرر كود متقدم ومساعد AI قوي. يوفر تحرير كود ذكي، إصلاح الأخطاء، وإعادة هيكلة الكود تلقائياً.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">Code Editor</span>
+                <span class="tag">AI-Powered</span>
+                <span class="tag">Refactoring</span>
+              </div>
+              <a href="https://cursor.sh" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Claude Code -->
+            <div class="tool-card fade-in delay-3" data-tool="claudecode" data-category="agents">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=claude.com&sz=128" alt="Claude Code" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Claude+Code'">
+              </div>
+              <h3 class="tool-title">Claude Code</h3>
+              <p class="tool-description">
+                مساعد برمجة ذكي من Anthropic. يعمل مباشرة في Terminal ويدعم VS Code و JetBrains. يوفر توليد كود، تصحيح الأخطاء، وإدارة Git باستخدام أوامر اللغة الطبيعية.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">Anthropic</span>
+                <span class="tag">Terminal</span>
+                <span class="tag">IDE Integration</span>
+              </div>
+              <a href="https://claude.com/product/claude-code" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- v0 -->
+            <div class="tool-card fade-in delay-3" data-tool="v0" data-category="agents">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=v0.dev&sz=128" alt="v0" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=v0'">
+              </div>
+              <h3 class="tool-title">v0</h3>
+              <p class="tool-description">
+                منصة ذكاء اصطناعي من Vercel لإنشاء مكونات React من أوصاف نصية. يولد مكونات جاهزة للإنتاج باستخدام Tailwind CSS و shadcn/ui. مثالي للتطوير السريع والنماذج الأولية.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">Vercel</span>
+                <span class="tag">React Components</span>
+                <span class="tag">Tailwind CSS</span>
+              </div>
+              <a href="https://v0.dev" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Replit -->
+            <div class="tool-card fade-in delay-3" data-tool="replit" data-category="agents">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=replit.com&sz=128" alt="Replit" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Replit'">
+              </div>
+              <h3 class="tool-title">Replit</h3>
+              <p class="tool-description">
+                بيئة تطوير متكاملة سحابية مدعومة بالذكاء الاصطناعي. يدعم أكثر من 50 لغة برمجة مع Ghostwriter للمساعدة في البرمجة. تعاون مباشر، نشر بنقرة واحدة، وبدون إعداد.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">Cloud IDE</span>
+                <span class="tag">Ghostwriter</span>
+                <span class="tag">50+ Languages</span>
+              </div>
+              <a href="https://replit.com" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Windsurf -->
+            <div class="tool-card fade-in delay-3" data-tool="windsurf" data-category="agents">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=windsurf.ai&sz=128" alt="Windsurf" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Windsurf'">
+              </div>
+              <h3 class="tool-title">Windsurf</h3>
+              <p class="tool-description">
+                محرر كود ذكي مدعوم بالذكاء الاصطناعي. يوفر إكمال كود متقدم، تحرير ذكي، وإصلاح أخطاء تلقائي. مصمم للمطورين الذين يريدون تجربة برمجة محسنة بالذكاء الاصطناعي.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">AI Code Editor</span>
+                <span class="tag">Smart Completion</span>
+                <span class="tag">Auto Fix</span>
+              </div>
+              <a href="https://windsurf.ai" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Lovable -->
+            <div class="tool-card fade-in delay-3" data-tool="lovable" data-category="agents">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=lovable.dev&sz=128" alt="Lovable" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Lovable'">
+              </div>
+              <h3 class="tool-title">Lovable</h3>
+              <p class="tool-description">
+                منصة لبناء تطبيقات ويب كاملة باستخدام الذكاء الاصطناعي. أنشئ تطبيقات احترافية من وصف نصي بسيط. يدعم React، Tailwind CSS، وتكاملات متعددة.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">App Builder</span>
+                <span class="tag">No-Code</span>
+                <span class="tag">React</span>
+              </div>
+              <a href="https://lovable.dev" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Antigravity -->
+            <div class="tool-card fade-in delay-3" data-tool="antigravity" data-category="agents">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=google.com&sz=128" alt="Antigravity" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Antigravity'">
+              </div>
+              <h3 class="tool-title">Antigravity</h3>
+              <p class="tool-description">
+                منصة تطوير تطبيقات ذكاء اصطناعي من Google. يوفر أدوات متكاملة لبناء تطبيقات كاملة باستخدام الذكاء الاصطناعي مع دعم متعدد اللغات والأطر البرمجية.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">Google</span>
+                <span class="tag">AI Development</span>
+                <span class="tag">App Builder</span>
+              </div>
+              <a href="https://antigravity.ai" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text to Audio Section -->
+        <div class="category-section fade-in delay-3" data-category="audio">
+          <div class="category-header">
+            <h2 class="category-title">
+              <svg class="category-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 18V5l12-2v13"/>
+                <circle cx="6" cy="18" r="3"/>
+                <circle cx="18" cy="16" r="3"/>
+              </svg>
+              <span>Text to Audio / Audio AI</span>
+              <span class="category-help" data-tooltip="أدوات تحويل النص إلى صوت ومواد صوتية. تشمل تحويل النص إلى كلام، إنشاء الموسيقى، البودكاست، والأصوات الطبيعية باستخدام الذكاء الاصطناعي.">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                  <line x1="12" y1="17" x2="12.01" y2="17"/>
+                </svg>
+              </span>
+            </h2>
+            <pre class="code-line category-subtitle">
+<span class="comment">// تحويل النص إلى صوت، بودكاست، موسيقى، وأصوات طبيعية</span>
+            </pre>
+          </div>
+          <div class="tools-grid">
+            <!-- ElevenLabs -->
+            <div class="tool-card fade-in delay-3" data-tool="elevenlabs" data-category="audio">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=elevenlabs.io&sz=128" alt="ElevenLabs" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=ElevenLabs'">
+              </div>
+              <h3 class="tool-title">ElevenLabs</h3>
+              <p class="tool-description">
+                منصة متقدمة لتحويل النص إلى كلام طبيعي. أصوات عالية الجودة، دعم متعدد اللغات، ونسخ الأصوات.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">Text-to-Speech</span>
+                <span class="tag">أصوات طبيعية</span>
+                <span class="tag">متعدد اللغات</span>
+              </div>
+              <a href="https://elevenlabs.io" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Suno AI -->
+            <div class="tool-card fade-in delay-3" data-tool="suno" data-category="audio">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=suno.ai&sz=128" alt="Suno AI" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Suno'">
+              </div>
+              <h3 class="tool-title">Suno AI</h3>
+              <p class="tool-description">
+                منصة لإنشاء الموسيقى من النص. أنشئ أغاني كاملة مع كلمات، لحن، وآلات موسيقية باستخدام الذكاء الاصطناعي.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">Music Generation</span>
+                <span class="tag">أغاني</span>
+                <span class="tag">AI Music</span>
+              </div>
+              <a href="https://www.suno.ai" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Murf AI -->
+            <div class="tool-card fade-in delay-3" data-tool="murf" data-category="audio">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=murf.ai&sz=128" alt="Murf AI" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Murf'">
+              </div>
+              <h3 class="tool-title">Murf AI</h3>
+              <p class="tool-description">
+                منصة احترافية لتحويل النص إلى كلام. مثالية للبودكاست، الإعلانات، والمواد التعليمية. أكثر من 120 صوت.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">Podcast</span>
+                <span class="tag">Voiceover</span>
+                <span class="tag">120+ Voices</span>
+              </div>
+              <a href="https://murf.ai" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Amazon Polly -->
+            <div class="tool-card fade-in delay-3" data-tool="polly" data-category="audio">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=aws.amazon.com&sz=128" alt="Amazon Polly" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Polly'">
+              </div>
+              <h3 class="tool-title">Amazon Polly</h3>
+              <p class="tool-description">
+                خدمة AWS لتحويل النص إلى كلام. يدعم أكثر من 100 صوت عبر 41 لغة. مناسب للمطورين والتطبيقات.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">AWS</span>
+                <span class="tag">API</span>
+                <span class="tag">100+ Voices</span>
+              </div>
+              <a href="https://aws.amazon.com/polly" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Typecast -->
+            <div class="tool-card fade-in delay-3" data-tool="typecast" data-category="audio">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=typecast.ai&sz=128" alt="Typecast" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Typecast'">
+              </div>
+              <h3 class="tool-title">Typecast</h3>
+              <p class="tool-description">
+                منصة لإنشاء محتوى صوتي وفيديو مع تعبيرات عاطفية. إنشاء شخصيات افتراضية، بودكاست، ومحتوى تفاعلي.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">Expressive</span>
+                <span class="tag">Avatars</span>
+                <span class="tag">Video</span>
+              </div>
+              <a href="https://typecast.ai" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Jellypod -->
+            <div class="tool-card fade-in delay-3" data-tool="jellypod" data-category="audio">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=jellypod.ai&sz=128" alt="Jellypod" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Jellypod'">
+              </div>
+              <h3 class="tool-title">Jellypod</h3>
+              <p class="tool-description">
+                استوديو بودكاست ذكي بالكامل. أنشئ بودكاست واقعية مع أصوات AI، نسخ الأصوات، نصوص قابلة للتحرير، وتوزيع مدمج على Spotify. يدعم أكثر من 25 لغة مع ميزات التحليل والجدولة.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">AI Podcast Studio</span>
+                <span class="tag">Voice Cloning</span>
+                <span class="tag">Distribution</span>
+              </div>
+              <a href="https://jellypod.ai" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text to Image Section -->
+        <div class="category-section fade-in delay-3" data-category="image">
+          <div class="category-header">
+            <h2 class="category-title">
+              <svg class="category-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                <circle cx="8.5" cy="8.5" r="1.5"/>
+                <polyline points="21 15 16 10 5 21"/>
+              </svg>
+              <span>Text to Image</span>
+              <span class="category-help" data-tooltip="أدوات تحويل النص إلى صور فنية وتصميمات. تستخدم الذكاء الاصطناعي لإنشاء صور عالية الجودة من أوصاف نصية، مع دعم أنماط فنية متنوعة وتحرير متقدم.">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                  <line x1="12" y1="17" x2="12.01" y2="17"/>
+                </svg>
+              </span>
+            </h2>
+            <pre class="code-line category-subtitle">
+<span class="comment">// تحويل النص إلى صور فنية، تصميمات، ورسوم احترافية</span>
+            </pre>
+          </div>
+          <div class="tools-grid">
+            <!-- Midjourney -->
+            <div class="tool-card fade-in delay-3" data-tool="midjourney" data-category="image">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=midjourney.com&sz=128" alt="Midjourney" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Midjourney'">
+              </div>
+              <h3 class="tool-title">Midjourney</h3>
+              <p class="tool-description">
+                منصة فنية متقدمة لتوليد الصور. معروفة بجودة فنية عالية، أنماط متنوعة، ودعم 3D animation في الإصدار 7.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">Artistic</span>
+                <span class="tag">v7</span>
+                <span class="tag">3D Animation</span>
+              </div>
+              <a href="https://www.midjourney.com" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Stable Diffusion -->
+            <div class="tool-card fade-in delay-3" data-tool="stable" data-category="image">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=stability.ai&sz=128" alt="Stable Diffusion" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Stable+Diffusion'">
+              </div>
+              <h3 class="tool-title">Stable Diffusion</h3>
+              <p class="tool-description">
+                نموذج مفتوح المصدر لتوليد الصور. قابل للتخصيص الكامل، يعمل محلياً، ومجتمع نشط من المطورين.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">Open Source</span>
+                <span class="tag">Customizable</span>
+                <span class="tag">Local</span>
+              </div>
+              <a href="https://stability.ai" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Adobe Firefly -->
+            <div class="tool-card fade-in delay-3" data-tool="firefly" data-category="image">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=adobe.com&sz=128" alt="Adobe Firefly" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Firefly'">
+              </div>
+              <h3 class="tool-title">Adobe Firefly</h3>
+              <p class="tool-description">
+                مجموعة أدوات الذكاء الاصطناعي من Adobe. متكاملة مع Creative Cloud، توليد صور آمنة قانونياً، وتحرير متقدم.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">Adobe</span>
+                <span class="tag">Creative Cloud</span>
+                <span class="tag">Commercial Safe</span>
+              </div>
+              <a href="https://www.adobe.com/products/firefly.html" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Leonardo AI -->
+            <div class="tool-card fade-in delay-3" data-tool="leonardo" data-category="image">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=leonardo.ai&sz=128" alt="Leonardo AI" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Leonardo'">
+              </div>
+              <h3 class="tool-title">Leonardo AI</h3>
+              <p class="tool-description">
+                منصة شاملة لتوليد وتحرير الصور. أدوات متقدمة، أنماط فنية متنوعة، وتوليد 3D models.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">Image Editing</span>
+                <span class="tag">3D Models</span>
+                <span class="tag">Art Styles</span>
+              </div>
+              <a href="https://leonardo.ai" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Nano Banana Pro -->
+            <div class="tool-card fade-in delay-3" data-tool="nanobanana" data-category="image">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=gemini.google&sz=128" alt="Nano Banana Pro" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Nano+Banana+Pro'">
+              </div>
+              <h3 class="tool-title">Nano Banana Pro</h3>
+              <p class="tool-description">
+                أداة متقدمة لتوليد وتحرير الصور من Google Gemini. توفر دقة 2K، تحكم دقيق في الإضاءة وزاوية الكاميرا، عرض نصي متقدم، ومعالجة صور احترافية.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">Google</span>
+                <span class="tag">Gemini</span>
+                <span class="tag">2K Resolution</span>
+                <span class="tag">Image Editing</span>
+              </div>
+              <a href="https://gemini.google/overview/image-generation/" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- SeaDream -->
+            <div class="tool-card fade-in delay-3" data-tool="seadream" data-category="image">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=seedream4ai.co&sz=128" alt="SeaDream" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=SeaDream'">
+              </div>
+              <h3 class="tool-title">SeaDream 4.0</h3>
+              <p class="tool-description">
+                نموذج ByteDance المتقدم لتوليد الصور. يجمع بين توليد الصور من النص وتحرير الصور في بنية موحدة مع فهم متقدم للمشاهد المعقدة.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">ByteDance</span>
+                <span class="tag">Unified Architecture</span>
+                <span class="tag">Professional</span>
+              </div>
+              <a href="https://seedream4ai.co" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Reve -->
+            <div class="tool-card fade-in delay-3" data-tool="reve" data-category="image">
+              <div class="tool-image-wrapper">
+                <img src="assets/reve.jpg" alt="Reve" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Reve'">
+              </div>
+              <h3 class="tool-title">Reve</h3>
+              <p class="tool-description">
+                أداة ذكاء اصطناعي متخصصة في توليد صور واقعية وديناميكية. تلتقط الحركة السائلة والتفاصيل المعقدة، مثالية للقصص والتسويق.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">Hyper-realistic</span>
+                <span class="tag">Dynamic</span>
+                <span class="tag">Storytelling</span>
+              </div>
+              <a href="https://reve.ai" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Krea -->
+            <div class="tool-card fade-in delay-3" data-tool="krea" data-category="image">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=krea.ai&sz=128" alt="Krea" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Krea'">
+              </div>
+              <h3 class="tool-title">Krea</h3>
+              <p class="tool-description">
+                منصة ذكاء اصطناعي متقدمة لتوليد الفيديو والصور. توفر LoRA fine-tuning، رفع جودة الفيديو حتى 8K، وتحرير توليدي متقدم. واجهة سهلة الاستخدام.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">Video Generation</span>
+                <span class="tag">LoRA</span>
+                <span class="tag">8K Upscaling</span>
+              </div>
+              <a href="https://www.krea.ai" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text to Video Section -->
+        <div class="category-section fade-in delay-3" data-category="video">
+          <div class="category-header">
+            <h2 class="category-title">
+              <svg class="category-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="23 7 16 12 23 17 23 7"/>
+                <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+              </svg>
+              <span>Text to Video</span>
+              <span class="category-help" data-tooltip="أدوات تحويل النص إلى فيديو وأفلام قصيرة. تنتج محتوى فيديو احترافي من أوصاف نصية مع دعم الحركة، الكاميرا، والصوت المتزامن.">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                  <line x1="12" y1="17" x2="12.01" y2="17"/>
+                </svg>
+              </span>
+            </h2>
+            <pre class="code-line category-subtitle">
+<span class="comment">// تحويل النص إلى فيديو، أفلام قصيرة، ومحتوى مرئي متقدم</span>
+            </pre>
+          </div>
+          <div class="tools-grid">
+            <!-- Runway -->
+            <div class="tool-card fade-in delay-3" data-tool="runway" data-category="video">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=runwayml.com&sz=128" alt="Runway" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Runway'">
+              </div>
+              <h3 class="tool-title">Runway Gen-3</h3>
+              <p class="tool-description">
+                منصة متقدمة لتوليد الفيديو من النص. Gen-3 ينتج فيديو سينمائي واقعي بدقة 4K مع تحكم كامل بالكاميرا.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">Gen-3</span>
+                <span class="tag">4K</span>
+                <span class="tag">Cinematic</span>
+              </div>
+              <a href="https://runwayml.com" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Sora -->
+            <div class="tool-card fade-in delay-3" data-tool="sora" data-category="video">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=openai.com&sz=128" alt="Sora" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Sora'">
+              </div>
+              <h3 class="tool-title">Sora</h3>
+              <p class="tool-description">
+                نموذج OpenAI لتوليد الفيديو. ينتج فيديوهات عالية الجودة تصل إلى 60 ثانية مع فهم عميق للفيزياء والحركة.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">OpenAI</span>
+                <span class="tag">60 seconds</span>
+                <span class="tag">Physics</span>
+              </div>
+              <a href="https://openai.com/sora" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Pika Labs -->
+            <div class="tool-card fade-in delay-3" data-tool="pika" data-category="video">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=pika.art&sz=128" alt="Pika Labs" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Pika'">
+              </div>
+              <h3 class="tool-title">Pika Labs</h3>
+              <p class="tool-description">
+                منصة سهلة الاستخدام لتوليد الفيديو. تحويل الصور إلى فيديو، إضافة حركة، وإنشاء محتوى تفاعلي.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">Image-to-Video</span>
+                <span class="tag">Easy to Use</span>
+                <span class="tag">Animation</span>
+              </div>
+              <a href="https://pika.art" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- LTX Studio -->
+            <div class="tool-card fade-in delay-3" data-tool="ltx" data-category="video">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=ltx.studio&sz=128" alt="LTX Studio" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=LTX+Studio'">
+              </div>
+              <h3 class="tool-title">LTX Studio</h3>
+              <p class="tool-description">
+                منصة Lightricks لتوليد الفيديو. تحويل النصوص والسكريبتات إلى شخصيات، مشاهد، storyboards، وفيديو كامل.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">Lightricks</span>
+                <span class="tag">Storyboards</span>
+                <span class="tag">Full Production</span>
+              </div>
+              <a href="https://ltx.studio" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Synthesia -->
+            <div class="tool-card fade-in delay-3" data-tool="synthesia" data-category="video">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=synthesia.io&sz=128" alt="Synthesia" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Synthesia'">
+              </div>
+              <h3 class="tool-title">Synthesia</h3>
+              <p class="tool-description">
+                منصة لإنشاء فيديوهات مع شخصيات AI افتراضية. مثالية للتدريب، التعليم، والتسويق. أكثر من 160 شخصية.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">AI Avatars</span>
+                <span class="tag">Training</span>
+                <span class="tag">160+ Avatars</span>
+              </div>
+              <a href="https://www.synthesia.io" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Kling AI -->
+            <div class="tool-card fade-in delay-3" data-tool="kling" data-category="video">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=klingai.com&sz=128" alt="Kling AI" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Kling+AI'">
+              </div>
+              <h3 class="tool-title">Kling AI</h3>
+              <p class="tool-description">
+                نموذج ذكاء اصطناعي لتوليد الفيديو من النص طورته Kuaishou. ينتج فيديوهات عالية الجودة من أوصاف نصية طبيعية مع دعم للحركات المعقدة والمشاهد الواقعية.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">Kuaishou</span>
+                <span class="tag">Text-to-Video</span>
+                <span class="tag">High Quality</span>
+              </div>
+              <a href="https://klingai.com" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Google Veo -->
+            <div class="tool-card fade-in delay-3" data-tool="veo" data-category="video">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=deepmind.google&sz=128" alt="Google Veo" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Google+Veo'">
+              </div>
+              <h3 class="tool-title">Google Veo</h3>
+              <p class="tool-description">
+                نموذج Google DeepMind المتقدم لتوليد الفيديو من النص. ينتج فيديوهات عالية الدقة مع صوت متزامن. يدعم إنشاء محتوى سينمائي احترافي من أوصاف نصية.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">Google DeepMind</span>
+                <span class="tag">Synchronized Audio</span>
+                <span class="tag">High Resolution</span>
+              </div>
+              <a href="https://deepmind.google/models/veo" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Wan -->
+            <div class="tool-card fade-in delay-3" data-tool="wan" data-category="video">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=wanvideogenerator.com&sz=128" alt="Wan" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Wan'">
+              </div>
+              <h3 class="tool-title">Wan</h3>
+              <p class="tool-description">
+                نموذج مفتوح المصدر لتوليد الفيديو من Alibaba. يقدم واقعية سينمائية واتساق بصري ممتاز. يدعم دقة 4K مع تحكم ثلاثي الأبعاد في الحركة وتقديم HDR.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">Alibaba</span>
+                <span class="tag">Open Source</span>
+                <span class="tag">4K HDR</span>
+              </div>
+              <a href="https://wanvideogenerator.com" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Aggregators Section -->
+        <div class="category-section fade-in delay-3" data-category="aggregators">
+          <div class="category-header">
+            <h2 class="category-title">
+              <svg class="category-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+              </svg>
+              <span>Aggregators</span>
+              <span class="category-help" data-tooltip="منصات تجميعية تجمع أدوات ومصادر الذكاء الاصطناعي في مكان واحد. توفر أدلة شاملة، مراجعات، تصنيفات، وبحث متقدم لاكتشاف أفضل الأدوات.">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                  <line x1="12" y1="17" x2="12.01" y2="17"/>
+                </svg>
+              </span>
+            </h2>
+            <pre class="code-line category-subtitle">
+<span class="comment">// منصات تجميعية تجمع أدوات ومصادر الذكاء الاصطناعي في مكان واحد</span>
+            </pre>
+          </div>
+          <div class="tools-grid">
+            <!-- Higgsfield -->
+            <div class="tool-card fade-in delay-3" data-tool="higgsfield" data-category="aggregators">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=higgsfield.ai&sz=128" alt="Higgsfield" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Higgsfield'">
+              </div>
+              <h3 class="tool-title">Higgsfield</h3>
+              <p class="tool-description">
+                منصة تجميعية للذكاء الاصطناعي تجمع نماذج متعددة مثل Sora من OpenAI و Veo من Google. توفر معارض منظمة للوكالات التسويقية والعلامات التجارية.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">AI Aggregator</span>
+                <span class="tag">Video Models</span>
+                <span class="tag">Curated</span>
+              </div>
+              <a href="https://higgsfield.ai" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Freepik -->
+            <div class="tool-card fade-in delay-3" data-tool="freepik" data-category="aggregators">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=freepik.com&sz=128" alt="Freepik" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Freepik'">
+              </div>
+              <h3 class="tool-title">Freepik</h3>
+              <p class="tool-description">
+                منصة شاملة للموارد الإبداعية والذكاء الاصطناعي. توفر مكتبة ضخمة من الصور، الفيديو، الصوت المولد بالذكاء الاصطناعي، بالإضافة إلى موارد ستوك عالية الجودة.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">Creative Suite</span>
+                <span class="tag">Stock Assets</span>
+                <span class="tag">AI Tools</span>
+              </div>
+              <a href="https://www.freepik.com" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Futurepedia -->
+            <div class="tool-card fade-in delay-3" data-tool="futurepedia" data-category="aggregators">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=futurepedia.io&sz=128" alt="Futurepedia" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Futurepedia'">
+              </div>
+              <h3 class="tool-title">Futurepedia</h3>
+              <p class="tool-description">
+                أكبر دليل لأدوات الذكاء الاصطناعي. يحتوي على آلاف الأدوات المصنفة مع مراجعات، تصنيفات، وأوصاف مفصلة. منصة شاملة لاكتشاف واستكشاف أدوات الذكاء الاصطناعي.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">AI Directory</span>
+                <span class="tag">Reviews</span>
+                <span class="tag">Categorized</span>
+              </div>
+              <a href="https://www.futurepedia.io" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- There's An AI For That -->
+            <div class="tool-card fade-in delay-3" data-tool="theresanaiforthat" data-category="aggregators">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=theresanaiforthat.com&sz=128" alt="There's An AI For That" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Theres+An+AI+For+That'">
+              </div>
+              <h3 class="tool-title">There's An AI For That</h3>
+              <p class="tool-description">
+                قاعدة بيانات شاملة لأدوات الذكاء الاصطناعي مع بحث متقدم وتصفية ذكية. تساعد المستخدمين في العثور على الأداة المثالية لأي مهمة مع تحديثات يومية للأدوات الجديدة.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">AI Database</span>
+                <span class="tag">Advanced Search</span>
+                <span class="tag">Daily Updates</span>
+              </div>
+              <a href="https://theresanaiforthat.com" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Humanize AI Section -->
+        <div class="category-section fade-in delay-3" data-category="humanize">
+          <div class="category-header">
+            <h2 class="category-title">
+              <svg class="category-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+              <span>Humanize AI</span>
+              <span class="category-help" data-tooltip="أدوات تحويل المحتوى المولد بالذكاء الاصطناعي إلى نص طبيعي يشبه الكتابة البشرية. تساعد في تجاوز كاشفات الذكاء الاصطناعي وتحسين جودة النص وجعله أكثر طبيعية ووضوحاً.">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                  <line x1="12" y1="17" x2="12.01" y2="17"/>
+                </svg>
+              </span>
+            </h2>
+            <pre class="code-line category-subtitle">
+              <span class="comment">// تحويل النص المولد بالذكاء الاصطناعي إلى نص طبيعي بشري</span>
+            </pre>
+          </div>
+          <div class="tools-grid">
+            <!-- HumanizeAI.pro -->
+            <div class="tool-card fade-in delay-3" data-tool="humanizeaipro" data-category="humanize">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=humanizeai.pro&sz=128" alt="HumanizeAI.pro" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=HumanizeAI.pro'">
+              </div>
+              <h3 class="tool-title">HumanizeAI.pro</h3>
+              <p class="tool-description">
+                أداة متقدمة لتحويل النص المولد بالذكاء الاصطناعي إلى نص بشري طبيعي. يدعم عدة أوضاع إعادة كتابة (أكاديمي، رسمي، بسيط، وغيرها) مع وضع "Ultra run" لتجاوز كاشفات الذكاء الاصطناعي مثل GPTZero و Turnitin.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">Multiple Modes</span>
+                <span class="tag">Ultra Run</span>
+                <span class="tag">Bypass Detectors</span>
+              </div>
+              <a href="https://www.humanizeai.pro" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Humanize.ai -->
+            <div class="tool-card fade-in delay-3" data-tool="humanizeai" data-category="humanize">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=humanize.ai&sz=128" alt="Humanize.ai" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Humanize.ai'">
+              </div>
+              <h3 class="tool-title">Humanize.ai</h3>
+              <p class="tool-description">
+                أداة مجانية 100% لتحويل النص المولد بالذكاء الاصطناعي إلى نص بشري طبيعي. يتجاوز جميع كاشفات الذكاء الاصطناعي بدون الحاجة لتسجيل دخول أو بطاقة ائتمانية.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">100% Free</span>
+                <span class="tag">Bypass Detectors</span>
+                <span class="tag">No Credit Card</span>
+              </div>
+              <a href="https://humanize.ai" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Quillbot -->
+            <div class="tool-card fade-in delay-3" data-tool="quillbot" data-category="humanize">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=quillbot.com&sz=128" alt="Quillbot" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=Quillbot'">
+              </div>
+              <h3 class="tool-title">Quillbot</h3>
+              <p class="tool-description">
+                أداة كتابة ومدقق نحوي مدعوم بالذكاء الاصطناعي. يوفر إعادة صياغة، تلخيص، وفحص نحوي لتحسين وضوح النص وأسلوبه. مفيد لتحسين جودة الكتابة وإعادة صياغة المحتوى.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">Paraphrasing</span>
+                <span class="tag">Grammar Check</span>
+                <span class="tag">Summarizing</span>
+              </div>
+              <a href="https://quillbot.com" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- GPTZero -->
+            <div class="tool-card fade-in delay-3" data-tool="gptzero" data-category="humanize">
+              <div class="tool-image-wrapper">
+                <img src="https://www.google.com/s2/favicons?domain=gptzero.me&sz=128" alt="GPTZero" class="tool-image" onerror="this.src='https://via.placeholder.com/200x200/0088f6/ffffff?text=GPTZero'">
+              </div>
+              <h3 class="tool-title">GPTZero</h3>
+              <p class="tool-description">
+                كاشف ذكاء اصطناعي متقدم ودقيق. يحدد المحتوى المولد من ChatGPT، GPT-5، Gemini، Claude، وغيرها. يوفر دقة 99% في اكتشاف النص المولد بالذكاء الاصطناعي. يستخدمه المعلمون، الطلاب، والكتاب للتحقق من أصالة المحتوى.
+              </p>
+              <div class="tool-tags">
+                <span class="tag">AI Detector</span>
+                <span class="tag">99% Accuracy</span>
+                <span class="tag">Education</span>
+              </div>
+              <a href="https://gptzero.me" target="_blank" rel="noopener noreferrer" class="tool-link">
+                <span>زيارة الموقع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <span> ©2025 جميع الحقوق محفوظة </span>
+      <span> | </span>
+      <span><a class="link" href="mailto:MrZaid@zagent.ps">mrzaid@zagent.ps</a></span>
+      <span> | </span>
+      <span><a class="link" href="https://zagent.ps">الصفحة الرئيسية</a></span>
+    </footer>
+  </div>
+  <script src="library.js"></script>
+</body>
+</html>
+<script>
+  // Minimalist neural network animation (same as main site)
+  (function() {
+    var canvas = document.getElementById('codeRain');
+    if (!canvas) return;
+    var ctx = canvas.getContext('2d');
+
+    var width, height;
+    var nodes = [];
+    var edges = [];
+    var numNodes;
+    var maxNeighbors = 3;
+    var nodeColor = 'rgba(0, 136, 246, 0.9)';
+    var lineColor = 'rgba(0, 136, 246, 0.18)';
+    var pulseColor = 'rgba(0, 136, 246, 0.9)';
+
+    function rand(min, max) { return Math.random() * (max - min) + min; }
+
+    function resize() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+      var density = Math.max(18, Math.floor(Math.min(width, height) / 28));
+      numNodes = density;
+      initGraph();
+    }
+
+    function initGraph() {
+      nodes = new Array(numNodes).fill(0).map(function(){
+        return { x: rand(0, width), y: rand(0, height), vx: rand(-0.15, 0.15), vy: rand(-0.12, 0.12), r: rand(1.2, 2.0) };
+      });
+      edges = [];
+      for (var i = 0; i < nodes.length; i++) {
+        var dists = [];
+        for (var j = 0; j < nodes.length; j++) {
+          if (i === j) continue;
+          var dx = nodes[j].x - nodes[i].x;
+          var dy = nodes[j].y - nodes[i].y;
+          dists.push({ j: j, d2: dx*dx + dy*dy });
+        }
+        dists.sort(function(a,b){ return a.d2 - b.d2; });
+        var k = Math.min(maxNeighbors, dists.length);
+        for (var n = 0; n < k; n++) {
+          var t = dists[n].j;
+          if (i < t) {
+            edges.push({ a: i, b: t, t: Math.random(), speed: rand(0.002, 0.01) });
+          }
+        }
+      }
+    }
+
+    function update() {
+      for (var i = 0; i < nodes.length; i++) {
+        var n = nodes[i];
+        n.x += n.vx; n.y += n.vy;
+        if (n.x < -20 || n.x > width + 20) n.vx *= -1;
+        if (n.y < -20 || n.y > height + 20) n.vy *= -1;
+      }
+      for (var e = 0; e < edges.length; e++) {
+        edges[e].t += edges[e].speed;
+        if (edges[e].t > 1) edges[e].t = 0;
+      }
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, width, height);
+
+      ctx.lineWidth = 1;
+      ctx.strokeStyle = lineColor;
+      ctx.beginPath();
+      for (var e = 0; e < edges.length; e++) {
+        var ea = nodes[edges[e].a];
+        var eb = nodes[edges[e].b];
+        ctx.moveTo(ea.x, ea.y);
+        ctx.lineTo(eb.x, eb.y);
+      }
+      ctx.stroke();
+
+      for (var p = 0; p < edges.length; p++) {
+        var edge = edges[p];
+        var a = nodes[edge.a];
+        var b = nodes[edge.b];
+        var px = a.x + (b.x - a.x) * edge.t;
+        var py = a.y + (b.y - a.y) * edge.t;
+        ctx.fillStyle = pulseColor;
+        ctx.beginPath();
+        ctx.arc(px, py, 1.8, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      for (var i = 0; i < nodes.length; i++) {
+        var n = nodes[i];
+        ctx.fillStyle = nodeColor;
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    function loop() { update(); draw(); requestAnimationFrame(loop); }
+    resize();
+    window.addEventListener('resize', resize);
+    requestAnimationFrame(loop);
+  })();
+</script>
+

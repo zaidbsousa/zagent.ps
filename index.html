@@ -3,8 +3,38 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>قريباً - zAgent</title>
-  <meta name="description" content="صفحة قيد الإنشاء - قريباً">
+  <title>zAgent - أتمتة الأعمال والذكاء الاصطناعي | قريباً</title>
+  <meta name="description" content="zAgent - منصة أتمتة الأعمال والذكاء الاصطناعي. نحن نعمل على تطوير حلول مبتكرة لمواءمة بيئة العمل مع التطورات التكنولوجية في عالم الذكاء الاصطناعي والأتمتة. سجل بريدك الإلكتروني للوصول المبكر.">
+  <meta name="keywords" content="zAgent, أتمتة, ذكاء اصطناعي, AI, automation, business automation, فلسطين, automation tools">
+  <meta name="author" content="zAgent">
+  <meta name="language" content="Arabic">
+  <meta name="geo.region" content="PS">
+  <meta name="geo.placename" content="Palestine">
+  
+  <!-- Open Graph / Facebook, Instagram, WhatsApp, Telegram, LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zagent.ps/">
+  <meta property="og:title" content="zAgent - أتمتة الأعمال والذكاء الاصطناعي | قريباً">
+  <meta property="og:description" content="zAgent - منصة أتمتة الأعمال والذكاء الاصطناعي. نحن نعمل على تطوير حلول مبتكرة لمواءمة بيئة العمل مع التطورات التكنولوجية في عالم الذكاء الاصطناعي والأتمتة. سجل بريدك الإلكتروني للوصول المبكر.">
+  <meta property="og:image" content="https://zagent.ps/zAgent-logo.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ar_PS">
+  <meta property="og:site_name" content="zAgent">
+  
+  <!-- X  -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://zagent.ps/">
+  <meta name="twitter:title" content="zAgent - أتمتة الأعمال والذكاء الاصطناعي | قريباً">
+  <meta name="twitter:description" content="zAgent - منصة أتمتة الأعمال والذكاء الاصطناعي. نحن نعمل على تطوير حلول مبتكرة لمواءمة بيئة العمل مع التطورات التكنولوجية في عالم الذكاء الاصطناعي والأتمتة.">
+  <meta name="twitter:image" content="https://zagent.ps/zAgent-logo.png">
+  
+  <!-- WhatsApp, Telegram, and other messaging apps use Open Graph tags (same as Facebook/Instagram) -->
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="zAgent - شعار منصة أتمتة الأعمال والذكاء الاصطناعي">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://zagent.ps/">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap');
     :root {
@@ -179,9 +209,15 @@
     footer {
       padding: 18px 20px 28px;
       color: var(--muted);
-      font-size: 13px;
+      font-size: clamp(10px, 2vw, 13px);
       text-align: center;
       border-top: 1px solid rgba(0,0,0,0.08);
+      white-space: nowrap;
+      line-height: 1.5;
+    }
+    footer span {
+      display: inline;
+      margin: 0;
     }
     @media (prefers-reduced-motion: no-preference) {
       .fade-in { opacity: 0; transform: translateY(6px); animation: fade 600ms ease forwards; }
@@ -236,10 +272,11 @@
       border-bottom: 1px solid rgba(0, 136, 246, 0.3);
       color: #1a1a1a;
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-      font-size: 14px;
+      font-size: clamp(12px, 2vw, 14px);
       padding: 4px 8px;
-      min-width: 200px;
+      min-width: 180px;
       max-width: 280px;
+      width: 100%;
       outline: none;
       transition: border-color 200ms ease;
       vertical-align: middle;
@@ -334,11 +371,13 @@
       }
       footer {
         padding: 14px 16px 20px;
-        font-size: 12px;
+        font-size: clamp(9px, 2.2vw, 12px);
+        white-space: nowrap;
+        line-height: 1.5;
       }
       footer span {
-        display: block;
-        margin: 4px 0;
+        display: inline;
+        margin: 0;
       }
       .center {
         max-width: 100%;
@@ -406,8 +445,14 @@
         height: 18px;
       }
       footer {
-        font-size: 11px;
+        font-size: clamp(8px, 2.5vw, 11px);
         padding: 12px 12px 16px;
+        white-space: nowrap;
+        line-height: 1.5;
+      }
+      footer span {
+        display: inline;
+        margin: 0;
       }
       main {
         padding: 8px 12px;
@@ -430,10 +475,55 @@
   <link rel="apple-touch-icon" href="zAgent-favicon.png">
   <meta name="theme-color" content="#f0f1f5">
   <meta name="color-scheme" content="dark light">
-  <meta name="robots" content="noindex, nofollow">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet">
+  
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "zAgent",
+      "url": "https://zagent.ps",
+      "logo": "https://zagent.ps/zAgent-logo.png",
+      "description": "منصة أتمتة الأعمال والذكاء الاصطناعي - نحن نعمل على تطوير حلول مبتكرة لمواءمة بيئة العمل مع التطورات التكنولوجية في عالم الذكاء الاصطناعي والأتمتة",
+      "email": "mrzaid@zagent.ps",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "PS"
+      },
+      "sameAs": [
+        "https://www.instagram.com/zagent.ps",
+        "https://www.facebook.com/zagentps",
+        "https://wa.me/970592551069",
+        "https://github.com/zaidbsousa"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "mrzaid@zagent.ps",
+        "contactType": "Customer Service",
+        "availableLanguage": ["Arabic", "English"]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "zAgent",
+      "url": "https://zagent.ps",
+      "description": "منصة أتمتة الأعمال والذكاء الاصطناعي",
+      "inLanguage": "ar",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://zagent.ps/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
+  </script>
 </head>
 <body>
   <canvas class="code-bg" id="codeRain" aria-hidden="true"></canvas>
@@ -443,10 +533,10 @@
       <section class="center">
         <div class="code-editor fade-in">
           <div class="code-logo-wrapper">
-            <video class="logo" src="zAgent.mp4" aria-label="شعار zAgent" width="120" height="120" autoplay loop muted playsinline></video>
+            <img class="logo" src="zAgent-logo.png" alt="zAgent - شعار منصة أتمتة الأعمال والذكاء الاصطناعي" width="120" height="120">
           </div>
 
-          <pre class="code-line fade-in delay-1"><span class="comment">// Coming Soon</span></pre>
+          <pre class="code-line fade-in delay-1"><span class="comment">// Coming Soon | قريباً</span></pre>
           <pre class="code-line fade-in delay-1" style="font-size: 16px; margin: 8px 0; text-align: center;"><span class="keyword">const</span> <span class="identifier">title</span> <span class="operator">=</span> <span class="string">"قريباً - الموقع قيد الإنشاء"</span><span class="operator">;</span></pre>
 
           <div class="type-line fade-in delay-2" aria-live="polite" aria-atomic="true" style="margin: 12px 0;">
@@ -455,7 +545,7 @@
             <span class="caret" aria-hidden="true"></span>
           </div>
 
-          <pre class="code-line fade-in delay-2" style="margin-top: 24px;"><span class="comment">// Email Collection</span></pre>
+          <pre class="code-line fade-in delay-2" style="margin-top: 24px;"><span class="comment">// Early Contact | للتواصل المُبكر</span></pre>
           <form id="emailForm" class="email-form fade-in delay-2" style="margin-top: 12px; direction: ltr;">
             <div class="form-group">
               <pre class="code-line" style="margin: 0; display: inline-block;"><span class="keyword">const</span> <span class="identifier">email</span> <span class="operator">=</span> <span class="string">"</span></pre>
@@ -471,12 +561,19 @@
               <pre class="code-line" style="margin: 0; display: inline-block;"><span class="string">"</span><span class="operator">;</span></pre>
             </div>
             <button type="submit" class="submit-btn" aria-label="إرسال">
-              <pre class="code-line" style="margin: 0;"><span class="comment">// Submit</span></pre>
+              <pre class="code-line" style="margin: 0;"><span class="comment">// إرسال</span></pre>
             </button>
             <div id="formMessage" class="form-message" aria-live="polite"></div>
           </form>
 
-          <pre class="code-line fade-in delay-2" style="margin-top: 24px;"><span class="comment">// Social Links</span></pre>
+          <pre class="code-line fade-in delay-2" style="margin-top: 24px;"><span class="comment">// Portfolio | أعمالنا السابقة</span></pre>
+          <div class="fade-in delay-2" style="text-align: center; margin: 12px 0;">
+            <a href="https://portfolio.zagent.ps/" class="link" style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace; font-size: 14px; direction: rtl; display: inline-block;">
+              <span class="comment">// </span><span class="keyword">view</span> <span class="identifier">portfolio</span><span class="operator">()</span>
+            </a>
+          </div>
+
+          <pre class="code-line fade-in delay-2" style="margin-top: 24px;"><span class="comment">// Social Links | حساباتنا</span></pre>
           <nav class="social fade-in delay-2" aria-label="وسائل التواصل" style="direction: ltr; justify-content: center; margin-top: 12px;">
             <!-- Instagram (minimal outline) -->
           <a href="https://www.instagram.com/zagent.ps" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
@@ -502,6 +599,8 @@
       <span> ©2025 جميع الحقوق محفوظة </span>
       <span> | </span>
       <span><a class="link" href="mailto:MrZaid@zagent.ps">mrzaid@zagent.ps</a></span>
+      <span> | </span>
+      <span><a class="link" href="https://portfolio.zagent.ps/">أعمالنا السابقة</a></span>
     </footer>
   </div>
 </body>
@@ -510,7 +609,7 @@
   (function() {
     var phrases = [
       "تهيئة الأتمتة…",
-      "تحسين التدفقات…",
+      "مواءمة بيئة العمل…",
       "الذكاء الاصطناعي قيد العمل…",
       "جاري التجهيز للإطلاق…"
     ];
@@ -725,5 +824,3 @@
   })();
 </script>
 </html>
-
-
